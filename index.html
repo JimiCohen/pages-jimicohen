@@ -1,0 +1,869 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jimi Cohen | World Record Tree Planter, Founder of Treegens</title>
+<meta name="description" content="Jimi Cohen broke the world record for the most mangrove trees planted by one person in 24 hours: 30,469. Founder of Treegens, host of the Eco Champions podcast, and keynote speaker on regeneration.">
+<link rel="canonical" href="https://jimicohen.com/">
+<link rel="icon" type="image/png" href="/pages-jimicohen/favicon.png">
+<link rel="apple-touch-icon" href="/pages-jimicohen/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jimicohen.com/">
+<meta property="og:title" content="Jimi Cohen | World Record Breaking Tree Planter">
+<meta property="og:description" content="30,469 mangroves planted in 24 hours by one person. Founder of Treegens. Host of the Eco Champions podcast. Speaker.">
+<meta property="og:image" content="https://jimicohen.com/jimi.jpg">
+<meta property="og:image:secure_url" content="https://jimicohen.com/jimi.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="997">
+<meta property="og:image:height" content="1000">
+<meta property="og:image:alt" content="Jimi Cohen, world record tree planter and founder of Treegens">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@JimiCohen">
+<meta name="twitter:title" content="Jimi Cohen | World Record Breaking Tree Planter">
+<meta name="twitter:description" content="30,469 mangroves planted in 24 hours by one person. Founder of Treegens, podcast host and speaker.">
+<meta name="twitter:image" content="https://jimicohen.com/jimi.jpg">
+<meta name="twitter:image:alt" content="Jimi Cohen, world record tree planter and founder of Treegens">
+<meta name="theme-color" content="#0b1d14">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Jimi Cohen",
+  "url": "https://jimicohen.com",
+  "image": "https://jimicohen.com/jimi.jpg",
+  "jobTitle": "Founder and CEO",
+  "worksFor": { "@type": "Organization", "name": "Treegens", "url": "https://www.treegens.org" },
+  "nationality": "Australian",
+  "knowsAbout": ["Reforestation", "Mangrove restoration", "Regenerative finance", "Public speaking"],
+  "sameAs": [
+    "https://x.com/JimiCohen",
+    "https://www.youtube.com/@Ecochampionspodcast",
+    "https://www.tiktok.com/@treegens",
+    "https://www.instagram.com/thetreegens/",
+    "https://www.youtube.com/@JimiCohen-treegens",
+    "https://www.linkedin.com/company/treegens"
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b1d14;
+  --bg-2:#0e2419;
+  --bg-3:#122d1f;
+  --ink:#f2ede2;
+  --ink-dim:#d2c9b6;
+  --ink-faint:#a19b8a;
+  --leaf:#5ede8e;
+  --leaf-deep:#2e9e5b;
+  --gold:#e0b04e;
+  --line:rgba(242,237,226,.14);
+  --radius:20px;
+  --serif:"Fraunces",Georgia,serif;
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+::selection{background:var(--leaf);color:#08150e}
+
+/* ---------- texture + glow ---------- */
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.glow{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;z-index:0}
+
+a{color:inherit}
+img{max-width:100%;display:block}
+main{display:block}
+:focus-visible{outline:2px solid var(--leaf);outline-offset:3px}
+.skip-link{
+  position:fixed;left:16px;top:-64px;z-index:100;
+  background:var(--leaf);color:#08150e;padding:12px 22px;border-radius:999px;
+  font-weight:600;font-size:.95rem;text-decoration:none;transition:top .2s;
+}
+.skip-link:focus{top:16px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
+
+/* ---------- nav ---------- */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  background:rgba(11,29,20,.72);
+  border-bottom:1px solid transparent;
+  transition:border-color .3s;
+}
+nav.scrolled{border-bottom-color:var(--line)}
+.nav-inner{max-width:1120px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;min-width:0}
+.brand{font-family:var(--serif);font-size:1.25rem;font-weight:600;letter-spacing:.01em;text-decoration:none;display:flex;align-items:center;gap:10px;min-height:44px;flex:none}
+.brand svg{flex:none}
+.nav-links{display:flex;gap:28px;align-items:center;list-style:none;min-width:0}
+.nav-links a:not(.btn){text-decoration:none;font-size:.92rem;font-weight:500;color:var(--ink-dim);transition:color .2s;min-height:44px;display:inline-flex;align-items:center}
+.nav-links a:not(.btn):hover{color:var(--leaf)}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:13px 26px;border-radius:999px;text-decoration:none;
+  font-weight:600;font-size:.95rem;letter-spacing:.01em;
+  transition:transform .2s,box-shadow .2s,background .2s,color .2s;
+  cursor:pointer;border:0;
+}
+.btn-solid{background:var(--leaf);color:#08150e}
+.btn-solid:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(94,222,142,.28)}
+.btn-ghost{border:1px solid var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--leaf);color:var(--leaf);transform:translateY(-2px)}
+.btn{min-height:44px}
+.btn-sm{padding:10px 20px;font-size:.9rem;min-height:44px}
+@media(max-width:760px){
+  .nav-links li:not(.nav-cta):not(.nav-sponsor){display:none}
+  .nav-inner{padding:12px 16px;gap:8px;flex-wrap:wrap}
+  .nav-links{flex:1;min-width:0;justify-content:flex-end;flex-basis:100%}
+  .nav-cta{min-width:0;max-width:100%;flex:1 1 12rem}
+  .nav-cta .btn{display:block;white-space:normal;text-align:center;line-height:1.25;padding:10px 12px}
+}
+@media(max-width:760px){.btn{display:block;white-space:normal;max-width:100%;width:100%;min-width:0;text-align:center;line-height:1.25;height:auto}}
+@media(max-width:760px){.hero-grid{padding-top:172px}.nav-links{gap:10px}.nav-sponsor{flex:none}}
+
+/* ---------- hero ---------- */
+header{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding:130px 24px 80px}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:40px;padding-top:120px}}
+.hero-grid>div{min-width:0}
+@media(max-width:520px){
+  .hero-stats{flex-wrap:wrap}
+  .hero-stats>div{padding:16px 16px 0 0;margin-right:14px}
+  .hero-stats>div+div{border-left:0;padding-left:0}
+  .hero-stats b{font-size:1.5rem}
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:.875rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--leaf);
+  margin-bottom:22px;
+}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--leaf)}
+h1{
+  font-family:var(--serif);font-weight:500;
+  font-size:clamp(3rem,7.5vw,5.6rem);
+  line-height:1.02;letter-spacing:-.015em;
+  margin-bottom:26px;
+}
+h1 em{font-style:italic;color:var(--leaf)}
+.hero-sub{font-size:clamp(1.05rem,1.6vw,1.22rem);color:var(--ink-dim);max-width:30em;margin-bottom:36px}
+.hero-proof{
+  display:none;margin:-4px 0 26px;max-width:430px;
+  border:1px solid var(--line);border-radius:16px;background:var(--bg-3);
+  padding:12px 18px;gap:14px;align-items:center;text-decoration:none;
+  box-shadow:0 14px 34px rgba(0,0,0,.3);
+}
+.hero-proof b{display:block;font-size:.95rem;line-height:1.35}
+.hero-proof small{font-size:.875rem;color:var(--ink-faint)}
+.hero-proof u{color:var(--leaf);text-decoration:underline;text-underline-offset:3px}
+@media(max-width:900px){
+  .hero-proof{display:flex}
+  #top .hero-ctas .btn-ghost{display:none}
+}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:56px}
+.hero-stats{display:flex;gap:0;border-top:1px solid var(--line);max-width:560px}
+.hero-stats>div{padding:20px 28px 0 0;margin-right:28px}
+.hero-stats>div+div{border-left:1px solid var(--line);padding-left:28px}
+.hero-stats b{display:block;font-family:var(--serif);font-size:1.9rem;font-weight:600;color:var(--ink);line-height:1.1}
+.hero-stats span{font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint)}
+.hero-photo{position:relative}
+.hero-photo .frame{
+  position:relative;border-radius:32px;overflow:hidden;
+  box-shadow:0 40px 90px rgba(0,0,0,.5);
+  transform:rotate(1.5deg);
+}
+.hero-photo .frame img{width:100%;aspect-ratio:.92;object-fit:cover}
+.hero-photo::after{
+  content:"";position:absolute;inset:-14px -14px auto auto;width:100%;height:100%;
+  border:1px solid var(--line);border-radius:36px;z-index:-1;transform:rotate(-1.2deg);
+}
+.record-chip{
+  position:absolute;left:-26px;bottom:34px;
+  background:var(--bg-3);border:1px solid var(--line);border-radius:16px;
+  padding:14px 20px;display:flex;gap:12px;align-items:center;
+  box-shadow:0 18px 44px rgba(0,0,0,.45);
+}
+.record-chip .medal,.hero-proof .medal{
+  width:42px;height:42px;border-radius:50%;flex:none;
+  background:radial-gradient(circle at 32% 30%,#f4d489,var(--gold) 62%,#a97e2c);
+  display:flex;align-items:center;justify-content:center;color:#3c2b07;font-weight:700;font-size:1.1rem;
+}
+.record-chip b{display:block;font-size:.95rem;line-height:1.3}
+.record-chip span{font-size:.875rem;color:var(--ink-faint)}
+@media(max-width:900px){
+  .hero-photo{max-width:420px}
+  .record-chip{left:12px}
+}
+
+/* ---------- marquee ---------- */
+.marquee{border-block:1px solid var(--line);padding:18px 0;overflow:hidden;background:var(--bg-2)}
+.marquee-track{display:flex;gap:64px;width:max-content;animation:slide 36s linear infinite;white-space:nowrap}
+.marquee-track span{font-size:.875rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);display:flex;align-items:center;gap:64px}
+.marquee-track span::after{content:"✳";color:var(--leaf-deep);letter-spacing:0}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ---------- sections ---------- */
+section{padding:110px 0;position:relative;overflow:hidden}
+.sec-label{
+  font-size:.875rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--leaf);
+  margin-bottom:18px;display:flex;align-items:center;gap:10px;
+}
+.sec-label::before{content:"";width:34px;height:1px;background:var(--leaf)}
+h2{
+  font-family:var(--serif);font-weight:500;
+  font-size:clamp(2rem,4.4vw,3.3rem);
+  line-height:1.08;letter-spacing:-.01em;margin-bottom:22px;max-width:18em;
+}
+h2 em{font-style:italic;color:var(--leaf)}
+.lede{font-size:1.12rem;color:var(--ink-dim);max-width:32em}
+
+/* record */
+#record{background:var(--bg-2);border-block:1px solid var(--line)}
+.record-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-top:26px}
+@media(max-width:900px){.record-grid{grid-template-columns:1fr;gap:44px}}
+.count-figure{font-family:var(--serif);font-weight:600;font-size:clamp(4.2rem,10vw,7.5rem);line-height:1;color:var(--ink);letter-spacing:-.02em}
+.count-figure small{display:block;font-family:var(--sans);font-weight:500;font-size:1rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-top:14px}
+.record-facts{display:grid;gap:0;margin-top:40px;border-top:1px solid var(--line)}
+.record-facts div{display:flex;justify-content:space-between;gap:20px;padding:16px 0;border-bottom:1px solid var(--line);font-size:.98rem}
+.record-facts dt{color:var(--ink-faint)}
+.record-facts dd{font-weight:600;text-align:right}
+.video-embed{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:#000;box-shadow:0 30px 70px rgba(0,0,0,.45)}
+.video-embed::before{content:"";display:block;padding-top:56.25%}
+.video-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.watch-card{
+  position:relative;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;
+  min-height:380px;padding:34px;border-radius:var(--radius);overflow:hidden;
+  border:1px solid var(--line);text-decoration:none;
+  background:
+    radial-gradient(130% 100% at 85% 0%,rgba(94,222,142,.22),transparent 55%),
+    radial-gradient(100% 90% at 10% 100%,rgba(224,176,78,.14),transparent 55%),
+    linear-gradient(155deg,#143523,#0a1a11);
+  box-shadow:0 30px 70px rgba(0,0,0,.45);
+  transition:transform .25s,border-color .25s;
+}
+.watch-card:hover{transform:translateY(-4px);border-color:rgba(94,222,142,.5)}
+.watch-card .roots{position:absolute;inset:0;opacity:.5;pointer-events:none}
+.watch-card .play{
+  position:absolute;top:34px;left:34px;
+  width:64px;height:64px;border-radius:50%;background:var(--leaf);color:#08150e;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 14px 40px rgba(94,222,142,.35);
+  transition:transform .25s;
+}
+.watch-card:hover .play{transform:scale(1.08)}
+.watch-card b{font-family:var(--serif);font-size:1.55rem;font-weight:600;line-height:1.2;position:relative}
+.watch-card span{font-size:.9rem;color:var(--ink-dim);position:relative}
+.video-cap{margin-top:14px;font-size:.9rem;color:var(--ink-faint)}
+.fact-sources{margin-top:20px;font-size:.95rem;color:var(--ink-dim)}
+.fact-sources a{color:var(--ink);text-decoration:underline;text-underline-offset:3px;transition:color .2s}
+.fact-sources a:hover{color:var(--leaf)}
+
+/* treegens */
+.tg-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start;margin-top:10px}
+@media(max-width:900px){.tg-grid{grid-template-columns:1fr;gap:36px}}
+.tg-cards{display:grid;gap:16px}
+.tg-card{
+  border:1px solid var(--line);border-radius:var(--radius);padding:26px 28px;
+  background:linear-gradient(160deg,var(--bg-3),var(--bg-2));
+  transition:transform .25s,border-color .25s;
+}
+.tg-card:hover{transform:translateY(-4px);border-color:rgba(94,222,142,.45)}
+.tg-card h3{font-family:var(--serif);font-size:1.3rem;font-weight:600;margin-bottom:8px;display:flex;gap:12px;align-items:center}
+.tg-card p{color:var(--ink-dim);font-size:.97rem}
+.tg-card .ico{width:38px;height:38px;flex:none;border-radius:12px;background:rgba(94,222,142,.12);display:flex;align-items:center;justify-content:center;color:var(--leaf)}
+.tg-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+
+/* podcast */
+#podcast{background:var(--bg-2);border-block:1px solid var(--line);overflow:hidden}
+.pod-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+@media(max-width:900px){.pod-grid{grid-template-columns:1fr;gap:44px}}
+.pod-points{margin:26px 0 34px;display:grid;gap:14px;list-style:none}
+.pod-points li{display:flex;gap:14px;align-items:flex-start;color:var(--ink-dim)}
+.pod-points li svg{flex:none;margin-top:4px;color:var(--leaf)}
+
+/* speaking */
+.speak-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-top:10px}
+@media(max-width:900px){.speak-grid{grid-template-columns:1fr;gap:40px}}
+.topics{display:grid;gap:0;border-top:1px solid var(--line);counter-reset:topic}
+.topics>div{padding:22px 0;border-bottom:1px solid var(--line);display:flex;gap:22px;align-items:baseline}
+.topics>div::before{
+  counter-increment:topic;content:"0" counter(topic);
+  font-family:var(--serif);font-style:italic;color:var(--leaf);font-size:1.1rem;flex:none;
+}
+.topics h3{font-family:var(--serif);font-size:1.25rem;font-weight:600;margin-bottom:6px}
+.topics p{color:var(--ink-dim);font-size:.96rem}
+.stage-list{list-style:none;display:grid;gap:12px;margin-top:26px}
+.stage-list li{display:flex;justify-content:space-between;gap:16px;padding:15px 20px;border:1px solid var(--line);border-radius:14px;background:var(--bg-2);font-size:.95rem}
+.stage-list li b{font-weight:600}
+.stage-list li span{color:var(--ink-faint);flex:none}
+.stage-list li a{text-decoration:none;transition:color .2s}
+.stage-list li a:hover{color:var(--leaf)}
+
+/* about */
+#about{background:var(--bg-2);border-block:1px solid var(--line)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+@media(max-width:900px){.about-grid{grid-template-columns:1fr;gap:40px}}
+.about-copy p{color:var(--ink-dim);margin-bottom:18px}
+.about-copy p b{color:var(--ink)}
+.pull{
+  font-family:var(--serif);font-style:italic;font-weight:400;
+  font-size:clamp(1.5rem,2.8vw,2.1rem);line-height:1.3;color:var(--ink);
+  border-left:2px solid var(--leaf);padding-left:28px;margin:auto 0;
+}
+.pull footer{font-family:var(--sans);font-style:normal;font-size:.875rem;color:var(--ink-faint);margin-top:16px;letter-spacing:.06em;text-transform:uppercase}
+
+/* contact */
+#contact{text-align:center;padding:130px 0}
+#contact h2{margin:0 auto 20px;max-width:14em}
+#contact .lede{margin:0 auto 40px}
+.socials{display:flex;gap:14px;justify-content:center;margin-top:48px;flex-wrap:wrap}
+.socials a{
+  width:48px;height:48px;border-radius:50%;border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;color:var(--ink-dim);
+  transition:color .2s,border-color .2s,transform .2s;
+}
+.socials a:hover{color:var(--leaf);border-color:var(--leaf);transform:translateY(-3px)}
+
+/* footer */
+footer.site{border-top:1px solid var(--line);padding:34px 0;font-size:.875rem;color:var(--ink-faint)}
+footer.site .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer.site a{color:var(--ink-dim);text-decoration:none}
+footer.site a:hover{color:var(--leaf)}
+
+/* reveal (gated behind .js so content is never hidden without JavaScript) */
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+/* ---------- talk cards, reel, proof, enquiry (conversion 05) ---------- */
+.talk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:36px 0 10px}
+@media(max-width:900px){.talk-grid{grid-template-columns:1fr}}
+.talk-card{
+  border:1px solid var(--line);border-radius:var(--radius);padding:28px;
+  background:linear-gradient(160deg,var(--bg-3),var(--bg-2));
+  display:flex;flex-direction:column;gap:10px;
+  min-height:100%;
+}
+.talk-card h3{font-family:var(--serif);font-size:1.35rem;font-weight:600;line-height:1.2}
+.talk-meta{font-size:.875rem;color:var(--ink-faint);letter-spacing:.04em;text-transform:uppercase}
+.talk-card p{color:var(--ink-dim);font-size:.97rem}
+.talk-card .talk-pick{
+  margin-top:auto;align-self:flex-start;
+  min-height:44px;display:inline-flex;align-items:center;
+  color:var(--leaf);font-weight:600;text-decoration:none;
+}
+.talk-card .talk-pick:hover{text-decoration:underline;text-underline-offset:3px}
+.reel-block{margin:42px 0 8px}
+.reel-block h3{font-family:var(--serif);font-size:1.55rem;font-weight:600;margin:0 0 10px}
+.reel-block .lede{margin-bottom:18px}
+.proof-strip{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+  margin:48px 0 28px;padding:28px;border:1px solid var(--line);
+  border-radius:var(--radius);background:var(--bg-2);
+}
+@media(max-width:900px){.proof-strip{grid-template-columns:1fr}}
+.proof-strip h3{font-family:var(--serif);font-size:1.15rem;margin-bottom:8px}
+.proof-strip p{font-size:.95rem;color:var(--ink-dim)}
+.proof-strip a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+.proof-strip a:hover{color:var(--leaf)}
+.enquiry-wrap{text-align:left;max-width:640px;margin:36px auto 0}
+.enquiry-form{display:grid;gap:16px}
+.enquiry-form label{display:grid;gap:6px;font-weight:600;font-size:.95rem;color:var(--ink)}
+.enquiry-form .hint{font-weight:500;color:var(--ink-faint);font-size:.875rem}
+.enquiry-form input,.enquiry-form select,.enquiry-form textarea{
+  min-height:44px;width:100%;
+  background:var(--bg-3);color:var(--ink);
+  border:1px solid var(--line);border-radius:12px;
+  padding:12px 14px;font:inherit;font-size:1rem;
+}
+.enquiry-form textarea{min-height:120px;resize:vertical}
+.enquiry-form .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:600px){.enquiry-form .row{grid-template-columns:1fr}}
+.enquiry-form .actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:4px}
+.form-note{font-size:.95rem;color:var(--ink-dim);margin-top:18px}
+.form-status{margin-top:16px;color:var(--ink-dim);font-size:.95rem}
+.sheet-link{display:inline-flex;align-items:center;min-height:44px;font-weight:600;color:var(--leaf);text-decoration:none}
+.sheet-link:hover{text-decoration:underline;text-underline-offset:3px}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<nav id="nav" aria-label="Main">
+  <div class="nav-inner">
+    <a class="brand" href="#top" aria-label="Jimi Cohen, home">
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M13 24V10M13 10C13 10 12 3 5 2c0 7 5 8.5 8 8M13 10c0-4 2-7.5 8-8 0 6-4 8-8 8M8 24h10" stroke="#5ede8e" stroke-width="1.8" stroke-linecap="round"/></svg>
+      Jimi Cohen
+    </a>
+    <ul class="nav-links">
+      <li><a href="#record">The Record</a></li>
+      <li><a href="#treegens">Treegens</a></li>
+      <li><a href="#podcast">Podcast</a></li>
+      <li><a href="#speaking">Speaking</a></li>
+      <li><a href="#about">About</a></li>
+      <li class="nav-sponsor"><a href="/pages-jimicohen/sponsorship/">Sponsorship</a></li>
+      <li class="nav-cta"><a class="btn btn-solid btn-sm" href="#contact" data-track="availability_cta">Check Jimi's availability</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main" tabindex="-1">
+
+<header id="top">
+  <div class="glow" style="width:640px;height:640px;background:rgba(46,158,91,.16);top:-160px;right:-160px"></div>
+  <div class="glow" style="width:420px;height:420px;background:rgba(224,176,78,.07);bottom:-120px;left:-120px"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow reveal">World record tree planter</p>
+      <h1 class="reveal d1">Planting the future, <em>one record</em> at a time.</h1>
+      <a class="hero-proof reveal d2" href="#record">
+        <span class="medal" aria-hidden="true">✦</span>
+        <span><b>30,469 mangroves planted in 24 hours</b><small>World record, Earth Day 2024 · <u>See the proof</u></small></span>
+      </a>
+      <p class="hero-sub reveal d2">Jimi Cohen broke the world record by planting 30,469 mangroves in 24 hours with his own two hands. After his talk, audiences leave knowing what public, physical action feels like, how Treegens verifies and rewards planting, and how they can mobilise their own people. Organisers get a founder who has done the work, not a speaker who only describes it.</p>
+      <div class="hero-ctas reveal d3">
+        <a class="btn btn-solid" href="#contact" data-track="availability_cta">Check Jimi's availability</a>
+        <a class="btn btn-ghost" href="#record">See the record proof</a>
+      </div>
+      <div class="hero-stats reveal d3">
+        <div><b data-count="30469">30,469</b><span>Trees in 24 hours</span></div>
+        <div><b>2</b><span>World records broken</span></div>
+        <div><b>1B</b><span>Mission: trees in 24 hours</span></div>
+      </div>
+    </div>
+    <div class="hero-photo reveal d2">
+      <div class="frame"><img src="/pages-jimicohen/jimi.jpg" alt="Jimi Cohen smiling outdoors" fetchpriority="high"></div>
+      <div class="record-chip">
+        <div class="medal" aria-hidden="true">✦</div>
+        <div><b>Record breaker</b><span>30,469 mangroves planted in 24 hrs</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>World Record Breaker</span><span>Founder of Treegens</span><span>Eco Champions Podcast</span><span>Keynote Speaker</span><span>Mangrove Restoration</span><span>Regenerative Finance</span>
+    <span>World Record Breaker</span><span>Founder of Treegens</span><span>Eco Champions Podcast</span><span>Keynote Speaker</span><span>Mangrove Restoration</span><span>Regenerative Finance</span>
+  </div>
+</div>
+
+<section id="record">
+  <div class="wrap">
+    <p class="sec-label reveal">The world record</p>
+    <h2 class="reveal d1">30,469 mangroves. 24 hours. <em>One planter.</em></h2>
+    <div class="record-grid">
+      <div>
+        <p class="lede reveal d1">On Earth Day 2024, on the coast of Kwale County in Kenya, Jimi planted from one sunrise to the next and set the official world record for the most mangrove trees planted by an individual in 24 hours, beating the previous record by more than 7,000 trees.</p>
+        <dl class="record-facts reveal d2">
+          <div><dt>Trees planted</dt><dd><span data-count="30469">30,469</span> mangroves</dd></div>
+          <div><dt>Time</dt><dd>24 hours, non stop</dd></div>
+          <div><dt>Location</dt><dd>Kwale County, Kenya</dd></div>
+          <div><dt>Date</dt><dd>Earth Day, April 22, 2024</dd></div>
+          <div><dt>Previous record</dt><dd>23,060 trees</dd></div>
+        </dl>
+        <p class="fact-sources reveal d2">Sources: <a href="https://youtu.be/7kvaRaPMrSQ" target="_blank" rel="noopener">feature interview on The ECO Channel</a> · <a href="https://www.cryptoaltruists.com/blog/crypto-altruism-podcast-episode-158-treegens-decentralized-permissionless-tree-planting-with-world-record-tree-planter-jimi-cohen" target="_blank" rel="noopener">Crypto Altruism Podcast Ep. 158</a></p>
+        <p class="lede reveal d2" style="margin-top:30px;font-size:1rem">The record was never the finish line. Jimi went on to collaborate with the Kenya Scouts Association and Truphena on a second record, the most mangrove trees planted simultaneously. Now he is on a mission bigger than both: getting one billion trees planted in 24 hours.</p>
+      </div>
+      <div class="reveal d2">
+        <a class="watch-card" href="https://youtu.be/7kvaRaPMrSQ" target="_blank" rel="noopener" aria-label="Watch Jimi tell the story of the record on The ECO Channel, opens on YouTube">
+          <svg class="roots" viewBox="0 0 520 380" fill="none" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+            <path d="M260 380V210M260 210c0-60-40-95-110-100 8 62 55 95 110 100zM260 210c0-60 40-95 110-100-8 62-55 95-110 100zM260 260c-30-4-55 10-70 40M260 260c30-4 55 10 70 40M200 380c10-30 30-48 60-52M320 380c-10-30-30-48-60-52" stroke="#5ede8e" stroke-opacity=".35" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <div class="play" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.14v13.72c0 .8.87 1.3 1.56.9l11.14-6.86a1.05 1.05 0 000-1.8L9.56 4.24A1.05 1.05 0 008 5.14z"/></svg>
+          </div>
+          <b>Watch: the story behind the record</b>
+          <span>Feature interview with Jimi on The ECO Channel, on YouTube</span>
+        </a>
+        <p class="video-cap">Filmed after the 24 hour planting marathon on the Kenyan coast.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="treegens">
+  <div class="glow" style="width:520px;height:520px;background:rgba(46,158,91,.1);top:40px;left:-200px"></div>
+  <div class="wrap">
+    <div class="tg-grid">
+      <div>
+        <p class="sec-label reveal">Founder and CEO</p>
+        <h2 class="reveal d1">Treegens: where planting trees <em>pays off.</em></h2>
+        <p class="lede reveal d2">Jimi founded Treegens to turn reforestation into a movement anyone can join and everyone can trust. Planters film every tree going into the ground, the community verifies each planting, and verified work earns real rewards.</p>
+        <div class="tg-ctas reveal d3">
+          <a class="btn btn-solid" href="https://www.treegens.org" target="_blank" rel="noopener">Explore Treegens</a>
+          <a class="btn btn-ghost" href="https://treegens.app" target="_blank" rel="noopener">Open the app</a>
+        </div>
+      </div>
+      <div class="tg-cards">
+        <div class="tg-card reveal d1">
+          <h3><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></span>Proof of Plant</h3>
+          <p>Every planting is filmed with GPS on, so each tree is backed by evidence, not promises.</p>
+        </div>
+        <div class="tg-card reveal d2">
+          <h3><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></span>Verified by community</h3>
+          <p>Independent verifiers with skin in the game review the footage and vote before any reward is released.</p>
+        </div>
+        <div class="tg-card reveal d3">
+          <h3><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></span>Rewarding by design</h3>
+          <p>Verified planters earn on-chain rewards, turning environmental action into opportunity for communities worldwide.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="podcast">
+  <div class="wrap">
+    <div class="pod-grid">
+      <div class="reveal">
+        <div class="video-embed">
+          <iframe src="https://www.youtube-nocookie.com/embed/fa7Hc-Mb02o?autoplay=1&mute=1&loop=1&playlist=fa7Hc-Mb02o&playsinline=1&rel=0" title="Eco Champions Ep. 1 with Green Sheikh Abdul Aziz" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin allow-presentation allow-popups" allowfullscreen></iframe>
+        </div>
+        <p class="video-cap">Episode 1: Green Sheikh Abdul Aziz. Tap the speaker icon for sound.</p>
+      </div>
+      <div>
+        <p class="sec-label reveal">The podcast</p>
+        <h2 class="reveal d1">Eco Champions: the people <em>regrowing</em> the world.</h2>
+        <p class="lede reveal d2">On the Eco Champions podcast, Jimi sits down with the founders, sustainability leaders, and changemakers proving that doing right by the planet is the best business, and the best life, you can build.</p>
+        <ul class="pod-points reveal d2">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Honest conversations with the people leading real environmental change</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>From boardroom sustainability chiefs to boots-in-the-mud restoration pioneers</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Practical playbooks you can steal for your own impact journey</li>
+        </ul>
+        <div class="hero-ctas reveal d3">
+          <a class="btn btn-solid" href="https://www.youtube.com/@Ecochampionspodcast" target="_blank" rel="noopener">More episodes</a>
+          <a class="btn btn-ghost" href="mailto:holler@jimicohen.com?subject=Eco%20Champions%20podcast%20guest">Pitch a guest</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="speaking">
+  <div class="glow" style="width:520px;height:520px;background:rgba(224,176,78,.06);top:120px;right:-200px"></div>
+  <div class="wrap">
+    <p class="sec-label reveal">Public speaking</p>
+    <h2 class="reveal d1">Stories that move rooms <em>to move mountains.</em></h2>
+    <p class="lede reveal d2">Audiences leave knowing what 24 hours of planting takes, how Treegens verifies and rewards regeneration in the real world, and how a community can turn one public act into a movement. Organisers get a founder who has done the work.</p>
+
+    <div class="reel-block reveal d2" id="reel">
+      <h3>Speaking reel</h3>
+      <p class="lede" style="font-size:1rem">Jimi on camera after the record, in the feature interview on The ECO Channel. This is existing public footage, not a studio sizzle.</p>
+      <div class="video-embed" id="speaking-reel" data-track="reel_play">
+        <iframe src="https://www.youtube-nocookie.com/embed/7kvaRaPMrSQ?rel=0&playsinline=1" title="Speaking reel: Jimi Cohen on The ECO Channel" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin allow-presentation allow-popups" allowfullscreen></iframe>
+      </div>
+      <p class="video-cap">Prefer YouTube in its own tab? <a href="https://youtu.be/7kvaRaPMrSQ" target="_blank" rel="noopener">Open the ECO Channel interview</a>.</p>
+    </div>
+
+    <div class="talk-grid">
+      <article class="talk-card reveal d1">
+        <p class="talk-meta">World-record action</p>
+        <h3>The anatomy of a world record</h3>
+        <p class="talk-meta">Leadership, climate, and founder stages · keynote or fireside · length confirmed with the organiser</p>
+        <p>What 24 hours of non stop planting teaches about endurance, focus, and doing hard things in public. Audiences leave with a lived picture of the Earth Day 2024 attempt in Kwale County, Kenya, and a clearer bar for their own public action.</p>
+        <a class="talk-pick" href="#contact" data-track="talk_select" data-talk="world-record">Ask about this talk</a>
+      </article>
+      <article class="talk-card reveal d2">
+        <p class="talk-meta">Regenerative innovation</p>
+        <h3>Regenerative finance in the real world</h3>
+        <p class="talk-meta">Web3, ReFi, and sustainability teams · keynote or panel · length confirmed with the organiser</p>
+        <p>How Treegens films every planting, lets the community verify the footage, and rewards the people restoring ecosystems. Audiences leave able to explain Proof of Plant in plain language, not as a pitch deck abstraction.</p>
+        <a class="talk-pick" href="#contact" data-track="talk_select" data-talk="regenerative">Ask about this talk</a>
+      </article>
+      <article class="talk-card reveal d3">
+        <p class="talk-meta">Mobilising communities</p>
+        <h3>Building movements, not moments</h3>
+        <p class="talk-meta">Community, NGO, and campaign teams · keynote or working session · length confirmed with the organiser</p>
+        <p>How transparency and community turn a single public act into work other people can join. Audiences leave with a practical picture of mobilisation, drawn from Treegens and the Eco Champions conversations, not from invented client results.</p>
+        <a class="talk-pick" href="#contact" data-track="talk_select" data-talk="communities">Ask about this talk</a>
+      </article>
+    </div>
+
+    <p class="lede reveal d2" style="font-size:1rem;margin-top:36px">Recent stages and features</p>
+    <!-- TODO(logos): no event or media logo files exist in jimicohen-site.
+         Verified names only, no invented marks: ETH Vietnam 2024, ReFi Kenya Summit 2023,
+         The ECO Channel, Crypto Altruism, ReFi Generation, Trillion Trees Podcast.
+         Add logo files here only when Jimi supplies real artwork. -->
+    <!-- TODO(testimonials): no third-party organiser quotes or audience figures are present in source.
+         The only first-person line on this site is Jimi's own, in #about. Do not invent pull-quotes. -->
+    <ul class="stage-list reveal d3">
+      <li><b><a href="https://www.eth-vietnam.com/ethvn24" target="_blank" rel="noopener">ETH Vietnam</a></b><span>Speaker, 2024</span></li>
+      <li><b>ReFi Kenya Summit</b><span>Speaker, 2023</span></li>
+      <li><b><a href="https://youtu.be/7kvaRaPMrSQ" target="_blank" rel="noopener">The ECO Channel</a></b><span>Feature interview</span></li>
+      <li><b><a href="https://www.cryptoaltruists.com/blog/crypto-altruism-podcast-episode-158-treegens-decentralized-permissionless-tree-planting-with-world-record-tree-planter-jimi-cohen" target="_blank" rel="noopener">Crypto Altruism Podcast</a></b><span>Episode 158</span></li>
+      <li><b><a href="https://www.listennotes.com/podcasts/refi-generation/ep-11-lets-grow-treegens-w-zXZHSKWcyM7/" target="_blank" rel="noopener">ReFi Generation</a></b><span>Episode 11</span></li>
+      <li><b><a href="https://www.youtube.com/watch?v=HTySBkEJbOA" target="_blank" rel="noopener">Trillion Trees Podcast</a></b><span>Episode 3</span></li>
+    </ul>
+
+    <div class="proof-strip reveal d2" id="proof-strip">
+      <div>
+        <h3>Record, sourced</h3>
+        <p>30,469 mangroves in 24 hours. Earth Day, 22 April 2024. Kwale County, Kenya. Previous record 23,060. <a href="https://youtu.be/7kvaRaPMrSQ" target="_blank" rel="noopener">Feature interview on The ECO Channel</a>.</p>
+      </div>
+      <div>
+        <h3>Stages and media</h3>
+        <p>Speaker at ETH Vietnam 2024 and ReFi Kenya Summit 2023. Host of Eco Champions. Features on The ECO Channel, Crypto Altruism Ep 158, ReFi Generation Ep 11, and Trillion Trees Ep 3.</p>
+      </div>
+      <div>
+        <h3>Who is booking</h3>
+        <p>Jimi is the founder of Treegens and host of the Eco Champions podcast. The record breaker, not a commentator describing someone else's attempt.</p>
+      </div>
+    </div>
+
+    <div class="hero-ctas reveal d3" style="margin-top:8px;margin-bottom:0">
+      <a class="btn btn-solid" href="#contact" data-track="availability_cta">Check Jimi's availability</a>
+      <a class="btn btn-ghost" href="/pages-jimicohen/onesheet.html" data-track="onesheet_download">Speaker one-sheet</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-copy">
+      <p class="sec-label reveal">About</p>
+      <h2 class="reveal d1">Raised by a koala advocate. <em>Built for the wild.</em></h2>
+      <p class="reveal d2">Jimi grew up in Avalon, Australia, where his mother's work protecting local koalas taught him early that one determined person can bend the future of an ecosystem.</p>
+      <p class="reveal d2">That lesson became a life. Through <b>We Make Impact</b>, he worked on water security and community development projects. Then came the trees: founding <b>Treegens</b>, pioneering verified, rewarded planting across East Africa and beyond, and putting his own body on the line for a 24 hour world record on the Kenyan coast.</p>
+      <p class="reveal d2">Today he splits his time between the mud of mangrove sites, the mic of the <b>Eco Champions podcast</b>, and stages around the world, all in service of one idea: regeneration should be the most rewarding work on Earth.</p>
+    </div>
+    <blockquote class="pull reveal d2">
+      "Every tree I plant is dedicated to the people who believe this is possible. The record was never mine, it belongs to everyone who digs in."
+      <footer>Jimi Cohen</footer>
+    </blockquote>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="glow" style="width:600px;height:600px;background:rgba(46,158,91,.12);top:50%;left:50%;transform:translate(-50%,-50%)"></div>
+  <div class="wrap">
+    <p class="sec-label reveal" style="justify-content:center">Work with Jimi</p>
+    <h2 class="reveal d1">Let's put your stage <em>to work</em> for the planet.</h2>
+    <p class="lede reveal d2">Keynotes, panels, podcasts, and partnerships. Tell Jimi about the room, the date, and what you want people to do when they leave.</p>
+
+    <div class="enquiry-wrap reveal d3">
+      <!-- Enquiry form: there is NO form backend and NO Netlify Forms.
+           Content-Security-Policy form-action is none, so a native POST cannot leave this page.
+           JavaScript composes a mailto draft to holler@jimicohen.com. If mail does not open,
+           the visible address is the fallback. Never treat compose as a received submission.
+           Talk choice may be kept in this browser tab (sessionStorage key jimi_talk only).
+           Name, email, and other free-text fields are never stored. -->
+      <p id="enquiry-resume" class="form-status" role="status" hidden></p>
+      <form id="enquiry-form" class="enquiry-form" method="post" action="">
+        <div class="row">
+          <label for="organiser">Organiser name
+            <input id="organiser" name="organiser" type="text" autocomplete="name" required>
+          </label>
+          <label for="email">Work email
+            <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required>
+          </label>
+        </div>
+        <label for="organisation">Organisation or event
+          <input id="organisation" name="organisation" type="text" autocomplete="organization" required>
+        </label>
+        <div class="row">
+          <label for="when">Location and date
+            <input id="when" name="when" type="text" required placeholder="City, dates">
+          </label>
+          <label for="audience">Audience size
+            <select id="audience" name="audience" required>
+              <option value="">Choose an estimate</option>
+              <option>To be confirmed</option>
+              <option>Under 50</option>
+              <option>50 to 150</option>
+              <option>150 to 400</option>
+              <option>400 or more</option>
+            </select>
+          </label>
+        </div>
+        <label for="talk-choice">Talk
+          <select id="talk-choice" name="talk">
+            <option value="">Not sure yet</option>
+            <option value="world-record">The anatomy of a world record</option>
+            <option value="regenerative">Regenerative finance in the real world</option>
+            <option value="communities">Building movements, not moments</option>
+          </select>
+        </label>
+        <label for="budget">Budget band <span class="hint">(optional, for planning. Not a published fee.)</span>
+          <select id="budget" name="budget">
+            <option value="">Prefer to discuss later</option>
+            <option>To be confirmed</option>
+            <option>Under 2,500 USD</option>
+            <option>2,500 to 7,500 USD</option>
+            <option>7,500 to 15,000 USD</option>
+            <option>15,000 USD and above</option>
+          </select>
+        </label>
+        <label for="message">Message
+          <span class="hint">What should the room feel and do after the talk?</span>
+          <textarea id="message" name="message" rows="5"></textarea>
+        </label>
+        <div class="actions">
+          <button type="submit" class="btn btn-solid">Open enquiry email</button>
+          <a class="sheet-link" href="/pages-jimicohen/onesheet.html" data-track="onesheet_download">Speaker one-sheet</a>
+        </div>
+      </form>
+      <p class="form-note">No form is stored on this site. Submit opens a draft to <a href="mailto:holler@jimicohen.com">holler@jimicohen.com</a>. If nothing opens, write that address directly. This page will never claim a successful submission.</p>
+      <p id="enquiry-status" class="form-status" role="status" hidden></p>
+    </div>
+
+    <div class="socials reveal d3">
+      <a href="https://x.com/JimiCohen" target="_blank" rel="noopener" aria-label="Jimi Cohen on X"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93zm-1.29 19.5h2.04L6.49 3.24H4.3l13.31 17.41z"/></svg></a>
+      <a href="https://www.tiktok.com/@treegens" target="_blank" rel="noopener" aria-label="Treegens on TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.9 2.9 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.34 6.34 0 00-1-.05A6.33 6.33 0 005.36 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1.4-.1z"/></svg></a>
+      <a href="https://www.instagram.com/thetreegens/" target="_blank" rel="noopener" aria-label="Treegens on Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+      <a href="https://www.youtube.com/@JimiCohen-treegens" target="_blank" rel="noopener" aria-label="Jimi Cohen on YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 00.5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 002.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 002.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg></a>
+      <a href="https://www.linkedin.com/company/treegens" target="_blank" rel="noopener" aria-label="Treegens on LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05a3.75 3.75 0 013.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 110-4.13 2.07 2.07 0 010 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Jimi Cohen. Growing something good.</span>
+    <span><a href="https://www.treegens.org" target="_blank" rel="noopener">Treegens</a> · <a href="https://www.youtube.com/@Ecochampionspodcast" target="_blank" rel="noopener">Eco Champions</a> · <a href="/pages-jimicohen/sponsorship/">Sponsorship</a> · <a href="/pages-jimicohen/carbon-readiness/">Carbon QA</a> · <a href="/pages-jimicohen/onesheet.html" data-track="onesheet_download">Speaker one-sheet</a> · <a href="mailto:holler@jimicohen.com">Contact</a></span>
+  </div>
+</footer>
+
+<script>
+document.documentElement.classList.add('js');
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 10), {passive:true});
+
+const io = new IntersectionObserver(entries => {
+  for (const e of entries) if (e.isIntersecting || e.boundingClientRect.top < 0) { e.target.classList.add('in'); io.unobserve(e.target); }
+}, {threshold:.15, rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const cio = new IntersectionObserver(entries => {
+  for (const e of entries) {
+    if (!e.isIntersecting) continue;
+    const el = e.target, target = +el.dataset.count;
+    cio.unobserve(el);
+    if (reduce) { el.textContent = target.toLocaleString('en-US'); continue; }
+    const t0 = performance.now(), dur = 1800;
+    (function tick(t){
+      const p = Math.min((t - t0) / dur, 1), ease = 1 - Math.pow(1 - p, 4);
+      el.textContent = Math.round(target * ease).toLocaleString('en-US');
+      if (p < 1) requestAnimationFrame(tick);
+    })(t0);
+  }
+}, {threshold:.6});
+document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
+const siteEvents = [];
+function track(name){
+  if (typeof name !== 'string' || !/^[a-z_]+$/.test(name)) return;
+  siteEvents.push({ name: name, t: Date.now() });
+  if (typeof window.onSiteEvent === 'function') window.onSiteEvent({ name: name, t: Date.now() });
+}
+
+document.querySelectorAll('[data-track]').forEach(el => {
+  el.addEventListener('click', () => {
+    const name = el.getAttribute('data-track');
+    if (name) track(name);
+  });
+});
+
+function applyTalk(value){
+  const sel = document.getElementById('talk-choice');
+  if (!sel || typeof value !== 'string' || !value) return false;
+  let allowed = false;
+  for (const opt of sel.options) {
+    if (opt.value === value) { allowed = true; break; }
+  }
+  if (!allowed) return false;
+  sel.value = value;
+  try { sessionStorage.setItem('jimi_talk', value); } catch (err) {}
+  return true;
+}
+
+document.querySelectorAll('[data-talk]').forEach(el => {
+  el.addEventListener('click', () => {
+    applyTalk(el.getAttribute('data-talk'));
+  });
+});
+
+const talkSel = document.getElementById('talk-choice');
+if (talkSel) {
+  talkSel.addEventListener('change', () => {
+    if (talkSel.value) {
+      try { sessionStorage.setItem('jimi_talk', talkSel.value); } catch (err) {}
+    } else {
+      try { sessionStorage.removeItem('jimi_talk'); } catch (err) {}
+    }
+  });
+  let savedTalk = '';
+  try { savedTalk = sessionStorage.getItem('jimi_talk') || ''; } catch (err) {}
+  if (applyTalk(savedTalk)) {
+    const resume = document.getElementById('enquiry-resume');
+    if (resume) {
+      const opt = talkSel.selectedOptions && talkSel.selectedOptions[0];
+      const label = (opt && opt.textContent.trim()) || savedTalk;
+      resume.hidden = false;
+      resume.textContent = 'Picking up the talk you chose: ' + label + '. Kept in this browser tab only. Your name and email are not stored on this site.';
+    }
+  }
+}
+
+const form = document.getElementById('enquiry-form');
+if (form) {
+  let started = false;
+  form.addEventListener('focusin', () => {
+    if (!started) { started = true; track('form_start'); }
+  });
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    const fd = new FormData(form);
+    const talkSel = form.querySelector('[name="talk"]');
+    const talkOpt = talkSel && talkSel.selectedOptions && talkSel.selectedOptions[0];
+    const talkLabel = (talkOpt && talkOpt.textContent.trim()) || 'Not sure yet';
+    const lines = [
+      'Speaking enquiry from the jimicohen.com form.',
+      '',
+      'Organiser: ' + (fd.get('organiser') || ''),
+      'Work email: ' + (fd.get('email') || ''),
+      'Organisation / event: ' + (fd.get('organisation') || ''),
+      'Location / date: ' + (fd.get('when') || ''),
+      'Audience size: ' + (fd.get('audience') || ''),
+      'Talk: ' + talkLabel,
+      'Budget band: ' + (fd.get('budget') || ''),
+      '',
+      'Message:',
+      String(fd.get('message') || '')
+    ];
+    const href = 'mailto:holler@jimicohen.com?subject=' + encodeURIComponent('Speaking enquiry') + '&body=' + encodeURIComponent(lines.join('\n'));
+    track('form_complete');
+    window.location.href = href;
+    const status = document.getElementById('enquiry-status');
+    if (status) {
+      status.hidden = false;
+      status.textContent = 'Your email app should have opened a draft to holler@jimicohen.com. If nothing opened, send the same details to that address. This page does not store or send the form.';
+    }
+  });
+}
+</script>
+</body>
+</html>

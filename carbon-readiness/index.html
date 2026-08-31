@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carbon Buyer-Readiness QA Sprint | Jimi Cohen</title>
+<meta name="description" content="Find carbon evidence, title, quantity and buyer-claim gaps before a serious buyer does. One project or inventory, fixed scope, with draft findings in 48 hours after complete intake.">
+<link rel="canonical" href="https://jimicohen.com/carbon-readiness/">
+<link rel="icon" type="image/png" href="/pages-jimicohen/favicon.png">
+<link rel="apple-touch-icon" href="/pages-jimicohen/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jimicohen.com/carbon-readiness/">
+<meta property="og:title" content="Carbon Buyer-Readiness QA Sprint">
+<meta property="og:description" content="A focused pre-sale review for one carbon project or inventory, with a traceable evidence register and buyer-facing findings.">
+<meta property="og:image" content="https://jimicohen.com/jimi.jpg">
+<meta property="og:image:secure_url" content="https://jimicohen.com/jimi.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="997">
+<meta property="og:image:height" content="1000">
+<meta property="og:image:alt" content="Jimi Cohen, founder of Treegens">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Carbon Buyer-Readiness QA Sprint">
+<meta name="twitter:description" content="Find the evidence and claim gaps before a carbon buyer does.">
+<meta name="twitter:image" content="https://jimicohen.com/jimi.jpg">
+<meta name="twitter:image:alt" content="Jimi Cohen, founder of Treegens">
+<meta name="theme-color" content="#081913">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Carbon Buyer-Readiness QA Sprint",
+  "description": "A focused commercial-readiness review for one carbon project or inventory.",
+  "provider": {
+    "@type": "Person",
+    "name": "Jimi Cohen",
+    "url": "https://jimicohen.com"
+  },
+  "areaServed": "Worldwide",
+  "serviceType": "Carbon project commercial-readiness quality assurance"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#081913;
+  --bg-2:#0d241b;
+  --bg-3:#122e22;
+  --paper:#f3ecde;
+  --ink:#f3eee4;
+  --ink-dim:#d3cabc;
+  --ink-faint:#aaa294;
+  --leaf:#72efa3;
+  --leaf-deep:#2ca867;
+  --amber:#f0bd62;
+  --red:#ff917d;
+  --line:rgba(243,238,228,.14);
+  --line-strong:rgba(243,238,228,.26);
+  --radius:22px;
+  --serif:"Fraunces",Georgia,serif;
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --mono:"DM Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+body{
+  background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.055;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+::selection{background:var(--leaf);color:#05110c}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--leaf);outline-offset:4px}
+.skip-link{position:fixed;left:18px;top:-70px;z-index:100;background:var(--leaf);color:#06130d;padding:11px 20px;border-radius:999px;font-weight:600;text-decoration:none}
+.skip-link:focus{top:18px}
+.wrap{width:min(1140px,calc(100% - 48px));margin:0 auto;position:relative;z-index:2}
+
+nav{position:fixed;inset:0 0 auto;z-index:50;background:rgba(8,25,19,.78);border-bottom:1px solid var(--line);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.nav-inner{width:min(1140px,calc(100% - 48px));margin:0 auto;min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{font-family:var(--serif);font-size:1.24rem;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:10px;min-height:44px;white-space:nowrap}
+.brand-mark{width:22px;height:22px;border:1px solid var(--leaf);border-radius:50%;display:grid;place-items:center;color:var(--leaf);font-family:var(--mono);font-size:.875rem}
+.nav-links{list-style:none;display:flex;align-items:center;gap:25px}
+.nav-links a{min-height:44px;display:inline-flex;align-items:center;color:var(--ink-dim);font-size:.9rem;font-weight:500;text-decoration:none}
+.nav-links a:hover{color:var(--leaf)}
+.nav-links .nav-cta{border:1px solid var(--line-strong);border-radius:999px;padding:0 18px;color:var(--ink)}
+.nav-links .nav-cta:hover{border-color:var(--leaf)}
+
+header{min-height:100svh;padding:145px 0 86px;display:flex;align-items:center;position:relative;overflow:hidden}
+.orb{position:absolute;border-radius:50%;filter:blur(100px);pointer-events:none}
+.orb-a{width:560px;height:560px;background:rgba(44,168,103,.16);top:-170px;right:-120px}
+.orb-b{width:380px;height:380px;background:rgba(240,189,98,.09);left:-180px;bottom:-100px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:76px;align-items:center}
+.kicker{font-family:var(--mono);font-size:.875rem;letter-spacing:.12em;text-transform:uppercase;color:var(--leaf);display:flex;align-items:center;gap:12px;margin-bottom:24px}
+.kicker::before{content:"";width:34px;height:1px;background:var(--leaf)}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(3.35rem,7.2vw,6.3rem);line-height:.98;letter-spacing:-.025em;max-width:9em;margin-bottom:28px}
+h1 em{font-style:italic;color:var(--leaf)}
+.hero-copy{font-size:clamp(1.05rem,1.5vw,1.22rem);color:var(--ink-dim);max-width:35em;margin-bottom:34px}
+.hero-ctas{display:flex;gap:13px;flex-wrap:wrap}
+.btn{min-height:50px;display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:12px 24px;font-weight:600;font-size:.95rem;text-decoration:none;border:1px solid var(--line-strong);transition:transform .2s,border-color .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-solid{background:var(--leaf);border-color:var(--leaf);color:#06130d}
+.btn-solid:hover{box-shadow:0 14px 38px rgba(114,239,163,.22)}
+.btn-ghost:hover{border-color:var(--leaf);color:var(--leaf)}
+.hero-note{margin-top:24px;color:var(--ink-faint);font-size:.9rem;max-width:48em}
+
+.qa-card{position:relative;border:1px solid var(--line-strong);border-radius:28px;background:linear-gradient(155deg,rgba(18,46,34,.95),rgba(7,23,17,.95));padding:28px;box-shadow:0 42px 90px rgba(0,0,0,.42);overflow:hidden}
+.qa-card::after{content:"QA";position:absolute;right:-12px;bottom:-52px;font-family:var(--serif);font-size:10rem;font-weight:600;color:rgba(243,238,228,.03);line-height:1}
+.card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;padding-bottom:23px;border-bottom:1px solid var(--line)}
+.card-head span{font-family:var(--mono);font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint)}
+.status{display:inline-flex;align-items:center;gap:8px;color:var(--leaf)!important}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--leaf);box-shadow:0 0 0 5px rgba(114,239,163,.11)}
+.qa-title{font-family:var(--serif);font-size:1.65rem;line-height:1.2;margin:25px 0 20px}
+.qa-lines{list-style:none;display:grid;gap:0;position:relative;z-index:1}
+.qa-lines li{display:flex;justify-content:space-between;gap:22px;padding:15px 0;border-bottom:1px solid var(--line);font-size:.94rem}
+.qa-lines span{color:var(--ink-faint)}
+.qa-lines b{font-weight:600;text-align:right}
+.qa-flag{margin-top:24px;border:1px solid rgba(240,189,98,.32);border-radius:15px;background:rgba(240,189,98,.07);padding:15px 17px;color:var(--ink-dim);font-size:.9rem;position:relative;z-index:1}
+.qa-flag b{color:var(--amber)}
+
+.proof-strip{border-block:1px solid var(--line);background:var(--bg-2)}
+.proof-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.proof-item{padding:28px 24px;border-right:1px solid var(--line)}
+.proof-item:first-child{border-left:1px solid var(--line)}
+.proof-item b{display:block;font-family:var(--serif);font-size:1.35rem;line-height:1.2;margin-bottom:5px}
+.proof-item span{font-size:.875rem;color:var(--ink-faint)}
+
+section{padding:108px 0;position:relative;overflow:hidden}
+.section-alt{background:var(--bg-2);border-block:1px solid var(--line)}
+.section-label{font-family:var(--mono);font-size:.875rem;letter-spacing:.12em;text-transform:uppercase;color:var(--leaf);margin-bottom:18px}
+h2{font-family:var(--serif);font-size:clamp(2.25rem,5vw,4rem);font-weight:500;line-height:1.06;letter-spacing:-.02em;max-width:17em}
+h2 em{color:var(--leaf);font-style:italic}
+.section-lede{margin-top:22px;color:var(--ink-dim);font-size:1.1rem;max-width:42em}
+
+.problem-grid{display:grid;grid-template-columns:.88fr 1.12fr;gap:76px;align-items:start}
+.fault-list{list-style:none;border-top:1px solid var(--line)}
+.fault-list li{display:grid;grid-template-columns:45px 1fr;gap:18px;padding:23px 0;border-bottom:1px solid var(--line)}
+.fault-list strong{font-family:var(--mono);font-size:.875rem;color:var(--red);font-weight:500;padding-top:2px}
+.fault-list b{display:block;font-family:var(--serif);font-size:1.22rem;margin-bottom:5px}
+.fault-list p{color:var(--ink-dim);font-size:.95rem}
+
+.deliverables{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:52px}
+.deliverable{border:1px solid var(--line);border-radius:18px;background:linear-gradient(150deg,var(--bg-3),var(--bg-2));padding:27px;min-height:210px}
+.deliverable-num{font-family:var(--mono);font-size:.875rem;color:var(--leaf);margin-bottom:32px}
+.deliverable h3{font-family:var(--serif);font-size:1.35rem;line-height:1.2;margin-bottom:9px}
+.deliverable p{color:var(--ink-dim);font-size:.95rem}
+
+.decision-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.decision{border-radius:18px;padding:28px;border:1px solid var(--line);background:rgba(8,25,19,.55)}
+.decision-tag{font-family:var(--mono);font-size:.875rem;font-weight:500;letter-spacing:.08em;margin-bottom:18px}
+.decision.go{border-color:rgba(114,239,163,.4)}.decision.go .decision-tag{color:var(--leaf)}
+.decision.hold{border-color:rgba(240,189,98,.4)}.decision.hold .decision-tag{color:var(--amber)}
+.decision.no-go{border-color:rgba(255,145,125,.36)}.decision.no-go .decision-tag{color:var(--red)}
+.decision h3{font-family:var(--serif);font-size:1.3rem;margin-bottom:8px}
+.decision p{color:var(--ink-dim);font-size:.94rem}
+.decision-note{margin-top:22px;color:var(--ink-faint);font-size:.9rem}
+
+.process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:52px;border-block:1px solid var(--line)}
+.process-step{padding:34px 30px;border-right:1px solid var(--line)}
+.process-step:first-child{border-left:1px solid var(--line)}
+.process-step .num{font-family:var(--mono);font-size:.875rem;color:var(--leaf);display:block;margin-bottom:32px}
+.process-step h3{font-family:var(--serif);font-size:1.35rem;margin-bottom:10px}
+.process-step p{color:var(--ink-dim);font-size:.95rem}
+
+.scope-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.evidence-list{list-style:none;margin-top:34px;border-top:1px solid var(--line)}
+.evidence-list li{padding:15px 0;border-bottom:1px solid var(--line);display:flex;gap:13px;align-items:flex-start;color:var(--ink-dim)}
+.evidence-list li::before{content:"✓";color:var(--leaf);font-family:var(--mono)}
+.scope-card{border:1px solid var(--line-strong);border-radius:24px;background:var(--bg-3);padding:32px;position:sticky;top:104px}
+.scope-card .mini{font-family:var(--mono);font-size:.875rem;text-transform:uppercase;letter-spacing:.1em;color:var(--leaf)}
+.price{font-family:var(--serif);font-size:clamp(3rem,6vw,4.8rem);line-height:1;margin:20px 0 8px}
+.price small{font-family:var(--sans);font-size:.95rem;color:var(--ink-faint);font-weight:500}
+.scope-card>p{color:var(--ink-dim)}
+.terms{list-style:none;margin:25px 0 28px;border-top:1px solid var(--line)}
+.terms li{display:flex;justify-content:space-between;gap:18px;padding:14px 0;border-bottom:1px solid var(--line);font-size:.92rem}
+.terms span{color:var(--ink-faint)}
+.terms b{text-align:right;font-weight:600}
+.kenya-note{border:1px solid rgba(114,239,163,.28);border-radius:14px;background:rgba(114,239,163,.06);padding:15px;margin:20px 0;color:var(--ink-dim);font-size:.9rem}
+.scope-card .btn{width:100%}
+.payment-note{margin-top:14px;color:var(--ink-faint)!important;font-size:.875rem}
+.product-card{position:relative;top:auto;background:linear-gradient(155deg,#173826,var(--bg-3))}
+.product-card .price{font-size:clamp(3rem,6vw,4.4rem)}
+.product-badges{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0}
+.product-badge{border:1px solid var(--line);border-radius:999px;padding:7px 11px;font-family:var(--mono);font-size:.875rem;color:var(--ink-dim)}
+
+.boundaries{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:42px}
+.boundary{border:1px solid var(--line);border-radius:14px;padding:17px 19px;color:var(--ink-dim);font-size:.94rem;display:flex;gap:12px}
+.boundary::before{content:"×";font-family:var(--mono);color:var(--red)}
+
+.final-cta{padding:110px 0;text-align:center;position:relative;overflow:hidden}
+.final-cta h2{margin:0 auto;max-width:13em}
+.final-cta p{color:var(--ink-dim);max-width:39em;margin:22px auto 32px}
+.final-cta .btn{min-width:250px}
+
+footer{border-top:1px solid var(--line);padding:30px 0 36px;color:var(--ink-faint);font-size:.875rem}
+.footer-inner{display:flex;justify-content:space-between;gap:24px;align-items:flex-start}
+.footer-links{display:flex;gap:19px;flex-wrap:wrap;justify-content:flex-end}
+.footer-links a{text-decoration:none;color:var(--ink-dim)}
+.footer-links a:hover{color:var(--leaf)}
+.privacy{margin-top:10px;max-width:52em}
+
+@media(max-width:920px){
+  .hero-grid,.problem-grid,.scope-grid{grid-template-columns:1fr;gap:52px}
+  .qa-card{max-width:620px}
+  .proof-grid{grid-template-columns:repeat(2,1fr)}
+  .proof-item:nth-child(3){border-left:1px solid var(--line);border-top:1px solid var(--line)}
+  .proof-item:nth-child(4){border-top:1px solid var(--line)}
+  .scope-card{position:static}
+}
+@media(max-width:720px){
+  .wrap,.nav-inner{width:min(100% - 32px,1140px)}
+  .nav-inner{min-height:66px}
+  .nav-links li:not(:last-child){display:none}
+  .nav-links .nav-cta{padding:0 14px}
+  header{padding:122px 0 68px;min-height:auto}
+  h1{font-size:clamp(3rem,15vw,4.55rem)}
+  section{padding:80px 0}
+  .hero-ctas,.btn{width:100%}
+  .deliverables,.decision-grid,.process-grid,.boundaries{grid-template-columns:1fr}
+  .process-step,.process-step:first-child{border-left:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .process-step:last-child{border-bottom:0}
+  .footer-inner{flex-direction:column}
+  .footer-links{justify-content:flex-start}
+}
+@media(max-width:500px){
+  .proof-grid{grid-template-columns:1fr}
+  .proof-item,.proof-item:first-child,.proof-item:nth-child(3),.proof-item:nth-child(4){border:0;border-bottom:1px solid var(--line)}
+  .proof-item:last-child{border-bottom:0}
+  .qa-lines li{flex-direction:column;gap:4px}
+  .qa-lines b{text-align:left}
+  .scope-card{padding:24px}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav aria-label="Primary navigation">
+  <div class="nav-inner">
+    <a class="brand" href="/pages-jimicohen/"><span class="brand-mark" aria-hidden="true">JC</span> Jimi Cohen</a>
+    <ul class="nav-links">
+      <li><a href="#deliverables">Deliverables</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#workbook">Workbook</a></li>
+      <li><a href="#scope">Scope</a></li>
+      <li><a class="nav-cta" href="mailto:holler@jimicohen.com?subject=Carbon%20buyer-readiness%20fit%20call&amp;body=Hi%20Jimi%2C%0A%0AI%27d%20like%20to%20discuss%20a%20buyer-readiness%20QA%20sprint.%0A%0AProject%20or%20inventory%3A%0AMethodology%20and%20status%3A%0ATarget%20buyer%20or%20deadline%3A%0A%0AThanks%2C%0A" data-track="fit_call_cta">Request a fit call</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
+  <header>
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+    <div class="wrap hero-grid">
+      <div>
+        <p class="kicker">Carbon buyer-readiness QA</p>
+        <h1>Find the gap <em>before the buyer does.</em></h1>
+        <p class="hero-copy">A focused pre-sale review for one carbon project or inventory. Turn scattered evidence into a traceable register, reconcile buyer-facing claims, and get a clear GO, HOLD or NO-GO finding before serious due diligence begins.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-solid" href="mailto:holler@jimicohen.com?subject=Carbon%20buyer-readiness%20fit%20call&amp;body=Hi%20Jimi%2C%0A%0AI%27d%20like%20to%20discuss%20a%20buyer-readiness%20QA%20sprint.%0A%0AProject%20or%20inventory%3A%0AMethodology%20and%20status%3A%0ATarget%20buyer%20or%20deadline%3A%0A%0AThanks%2C%0A" data-track="fit_call_cta">Request a 15-minute fit call <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-ghost" href="#deliverables">See the exact scope</a>
+        </div>
+        <p class="hero-note">Commercial-readiness QA only. This is not validation, verification, certification, brokerage, a legal title opinion or a sale of carbon credits.</p>
+      </div>
+
+      <aside class="qa-card" aria-label="Sprint overview">
+        <div class="card-head">
+          <span>Readiness file / 01</span>
+          <span class="status">Intake open</span>
+        </div>
+        <h2 class="qa-title">One project. One evidence trail. One decision.</h2>
+        <ul class="qa-lines">
+          <li><span>Scope</span><b>One project or inventory</b></li>
+          <li><span>Draft findings</span><b>Within 48 hours*</b></li>
+          <li><span>Decision</span><b>GO / HOLD / NO-GO</b></li>
+          <li><span>Buyer output</span><b>Sanitized one-page brief</b></li>
+          <li><span>Global fixed fee</span><b>US$450</b></li>
+        </ul>
+        <p class="qa-flag"><b>*Start condition:</b> the clock begins after complete intake, an agreed written scope and confirmation that work may start.</p>
+      </aside>
+    </div>
+  </header>
+
+  <div class="proof-strip" aria-label="Service facts">
+    <div class="wrap proof-grid">
+      <div class="proof-item"><b>48 hours</b><span>Draft findings after complete intake</span></div>
+      <div class="proof-item"><b>6 outputs</b><span>From evidence register to buyer brief</span></div>
+      <div class="proof-item"><b>1 scope</b><span>One project or defined inventory</span></div>
+      <div class="proof-item"><b>0 promises</b><span>No certification, sale or price guarantee</span></div>
+    </div>
+  </div>
+
+  <section class="section-alt" id="problem">
+    <div class="wrap problem-grid">
+      <div>
+        <p class="section-label">Where deals stall</p>
+        <h2>Carbon buyers do not buy a <em>folder of PDFs.</em></h2>
+        <p class="section-lede">They need a coherent chain from project claim to current evidence, quantity, authority and status. Small contradictions create big pauses.</p>
+      </div>
+      <ul class="fault-list">
+        <li><strong>01</strong><div><b>Claims do not match documents</b><p>Public copy, pitch materials and diligence files use different quantities, vintages, methodologies or status language.</p></div></li>
+        <li><strong>02</strong><div><b>Authority is assumed, not shown</b><p>The right to market, represent or transfer the inventory is unclear, incomplete or spread across several parties.</p></div></li>
+        <li><strong>03</strong><div><b>Inventory is not reconciled</b><p>Issued, retired, reserved, sold and available units are not tied to one current source of truth.</p></div></li>
+        <li><strong>04</strong><div><b>The buyer brief overreaches</b><p>Marketing language gets ahead of validation, verification, issuance or other documented milestones.</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="deliverables">
+    <div class="wrap">
+      <p class="section-label">The six outputs</p>
+      <h2>A compact diligence layer built for the <em>next buyer conversation.</em></h2>
+      <p class="section-lede">Every finding points back to a named document, evidence owner and current status. You leave with an action list, not a vague score.</p>
+      <div class="deliverables">
+        <article class="deliverable"><p class="deliverable-num">01 / Evidence register</p><h3>What exists, where it lives</h3><p>A structured index of the materials reviewed, with source, date, owner, status and material gaps.</p></article>
+        <article class="deliverable"><p class="deliverable-num">02 / Claim reconciliation</p><h3>One version of the truth</h3><p>A comparison of buyer-facing claims against project documents, registry references and stated status.</p></article>
+        <article class="deliverable"><p class="deliverable-num">03 / Authority checkpoint</p><h3>Who can say and sell what</h3><p>A commercial-readiness check of the documents supplied for marketing authority, title pathway and transfer roles.</p></article>
+        <article class="deliverable"><p class="deliverable-num">04 / Quantity check</p><h3>Inventory that adds up</h3><p>A reconciliation of vintage, quantity, issuance, retirement, reservation and availability information provided.</p></article>
+        <article class="deliverable"><p class="deliverable-num">05 / Decision memo</p><h3>GO, HOLD or NO-GO</h3><p>A concise finding, ranked gaps, document requests and the safest next commercial step.</p></article>
+        <article class="deliverable"><p class="deliverable-num">06 / Buyer brief + call</p><h3>Clear without overclaiming</h3><p>A sanitized one-page summary for initial buyer discussions, followed by a findings walkthrough.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt" id="decision">
+    <div class="wrap">
+      <p class="section-label">Decision language</p>
+      <h2>A useful answer, even when the answer is <em>not yet.</em></h2>
+      <div class="decision-grid">
+        <article class="decision go"><p class="decision-tag">GO</p><h3>Ready for a qualified conversation</h3><p>The supplied evidence supports a controlled buyer discussion, subject to the limits and open items recorded.</p></article>
+        <article class="decision hold"><p class="decision-tag">HOLD</p><h3>Promising, but close the gaps first</h3><p>One or more material inconsistencies or missing documents should be resolved before broader marketing.</p></article>
+        <article class="decision no-go"><p class="decision-tag">NO-GO</p><h3>Do not market this inventory yet</h3><p>The supplied record does not currently support the proposed buyer-facing claim, authority or availability position.</p></article>
+      </div>
+      <p class="decision-note">These are internal commercial-readiness findings, not an assurance opinion, certification decision or legal conclusion.</p>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap">
+      <p class="section-label">How it works</p>
+      <h2>Fast because the scope is <em>deliberately narrow.</em></h2>
+      <div class="process-grid">
+        <article class="process-step"><span class="num">STEP 01</span><h3>Fit call and scope</h3><p>We confirm the inventory, decision deadline, target buyer type, available evidence and whether the sprint is appropriate.</p></article>
+        <article class="process-step"><span class="num">STEP 02</span><h3>Complete intake</h3><p>You provide the agreed documents through a mutually accepted channel. The 48-hour draft window starts only when intake is complete.</p></article>
+        <article class="process-step"><span class="num">STEP 03</span><h3>Findings and action</h3><p>You receive the register, decision memo, buyer brief and a walkthrough focused on the next safe commercial move.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt" id="scope">
+    <div class="wrap scope-grid">
+      <div>
+        <p class="section-label">Intake</p>
+        <h2>Bring the current record, <em>including the awkward parts.</em></h2>
+        <p class="section-lede">The sprint works best when the source material is complete enough to compare claims, quantities, roles and status.</p>
+        <ul class="evidence-list">
+          <li>Project summary, geography, activity and named parties</li>
+          <li>Methodology, standard and current validation or verification status</li>
+          <li>Registry links, project IDs, serial ranges or issuance records, if applicable</li>
+          <li>Documents supplied for title, marketing authority and transfer pathway</li>
+          <li>Vintage, issued, retired, sold, reserved and available quantity records</li>
+          <li>Current website, deck, term sheet, buyer brief and other public claims</li>
+          <li>Known disputes, reversals, changes, restrictions or unresolved diligence questions</li>
+        </ul>
+      </div>
+      <aside class="scope-card" aria-label="Commercial scope">
+        <p class="mini">Global fixed scope</p>
+        <p class="price">US$450 <small>/ one sprint</small></p>
+        <p>One defined project or inventory, up to the agreed intake volume, with the six outputs listed above.</p>
+        <ul class="terms">
+          <li><span>Draft timing</span><b>48 hours after complete intake</b></li>
+          <li><span>Booking milestone</span><b>50% after written scope</b></li>
+          <li><span>Final milestone</span><b>50% before final editable pack</b></li>
+          <li><span>Findings call</span><b>Included</b></li>
+        </ul>
+        <p class="kenya-note"><b>Kenya-based organization?</b> Commercial terms and invoices are provided in KES after the fit call.</p>
+        <a class="btn btn-solid" href="mailto:holler@jimicohen.com?subject=Carbon%20buyer-readiness%20fit%20call&amp;body=Hi%20Jimi%2C%0A%0AI%27d%20like%20to%20discuss%20a%20buyer-readiness%20QA%20sprint.%0A%0AProject%20or%20inventory%3A%0AMethodology%20and%20status%3A%0ATarget%20buyer%20or%20deadline%3A%0A%0AThanks%2C%0A" data-track="fit_call_cta">Request the fit call</a>
+        <p class="payment-note">No checkout is offered here. Payment details are provided only after a mutually accepted written scope and verified invoice identity.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section id="workbook">
+    <div class="wrap scope-grid">
+      <div>
+        <p class="section-label">Self-serve option</p>
+        <h2>Organize the file yourself with the <em>same decision structure.</em></h2>
+        <p class="section-lede">The Carbon Buyer-Readiness Workbook is a lower-cost Excel system for teams that want to index their own evidence, reconcile claims and inventory, and assign gaps before deciding whether they need a human review.</p>
+        <ul class="evidence-list">
+          <li>10 linked worksheets with a live readiness dashboard</li>
+          <li>Evidence, claims, inventory and authority registers</li>
+          <li>Calculated availability and quantity variance checks</li>
+          <li>Buyer-question preparation and gap action plan</li>
+          <li>Formula-driven GO / HOLD / NO-GO signal</li>
+          <li>Sanitized one-page buyer brief template</li>
+        </ul>
+      </div>
+      <aside class="scope-card product-card" aria-label="Workbook offer">
+        <p class="mini">Self-serve Excel workbook</p>
+        <p class="price">US$39 <small>/ global launch price</small></p>
+        <p>One editable .xlsx workbook with clearly marked sample rows, dropdowns, formulas and commercial-readiness controls.</p>
+        <div class="product-badges" aria-label="Workbook features">
+          <span class="product-badge">10 worksheets</span>
+          <span class="product-badge">100 rows per tracker</span>
+          <span class="product-badge">Instant digital file</span>
+        </div>
+        <p class="kenya-note"><b>Kenya-based organization?</b> The launch price is KES 5,000 and the invoice is issued in KES through a verified payment route.</p>
+        <a class="btn btn-solid" href="mailto:holler@jimicohen.com?subject=Carbon%20Buyer-Readiness%20Workbook&amp;body=Hi%20Jimi%2C%0A%0AI%27d%20like%20to%20get%20the%20Carbon%20Buyer-Readiness%20Workbook.%0A%0AOrganization%3A%0ACountry%3A%0AProject%20or%20inventory%20type%3A%0A%0AThanks%2C%0A" data-track="workbook_cta">Request workbook access</a>
+        <p class="payment-note">No file is downloaded and no payment is taken by this page. Access is provided only after seller identity, currency, payment and delivery details are confirmed.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section-alt" id="boundaries">
+    <div class="wrap">
+      <p class="section-label">Scope boundaries</p>
+      <h2>Clear limits keep the finding <em>useful and honest.</em></h2>
+      <p class="section-lede">The sprint reviews the materials supplied for commercial readiness. It does not replace the regulated, technical or legal work below.</p>
+      <div class="boundaries">
+        <div class="boundary">No project validation, verification or certification</div>
+        <div class="boundary">No registry issuance, retirement, transfer or account work</div>
+        <div class="boundary">No legal opinion on title, contracts, tax or regulation</div>
+        <div class="boundary">No brokerage, buyer representation or transaction execution</div>
+        <div class="boundary">No methodology selection, project design or monitoring report</div>
+        <div class="boundary">No guarantee of sale, buyer acceptance, price or timeline</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta section-alt" id="contact">
+    <div class="orb orb-a"></div>
+    <div class="wrap">
+      <p class="section-label">Next step</p>
+      <h2>Start with a 15-minute <em>fit call.</em></h2>
+      <p>Bring the project name, methodology and status, approximate inventory, target buyer or deadline, and the biggest diligence question you already know about.</p>
+      <a class="btn btn-solid" href="mailto:holler@jimicohen.com?subject=Carbon%20buyer-readiness%20fit%20call&amp;body=Hi%20Jimi%2C%0A%0AI%27d%20like%20to%20discuss%20a%20buyer-readiness%20QA%20sprint.%0A%0AProject%20or%20inventory%3A%0AMethodology%20and%20status%3A%0ATarget%20buyer%20or%20deadline%3A%0A%0AThanks%2C%0A" data-track="fit_call_cta">Email holler@jimicohen.com <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div><b>Jimi Cohen</b><p class="privacy">This static page stores no enquiry data. The email links open your own mail application; no message is sent by the site.</p></div>
+    <div class="footer-links"><a href="/pages-jimicohen/">Home</a><a href="/pages-jimicohen/sponsorship/">Sponsorship</a><a href="mailto:holler@jimicohen.com">Contact</a></div>
+  </div>
+</footer>
+</body>
+</html>
